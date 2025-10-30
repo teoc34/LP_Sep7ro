@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Free Online Chess Lesson for Kids | Sep7Ro Chess School</title>
+  <meta name="description" content="Book a free live online chess lesson for kids 6–12. Boost focus, logic & confidence. Small groups, certified instructors. No experience needed." />
+
+  <style>
+    :root {
+      --bg-accent: #edf5ff;    
+      --accent: #2a77ca;       
+      --accent-dark: #286db6;  
+      --text-main: #1e293b;    
+      --text-secondary: #666666; 
+      --border: #cbd5e1;       
+      --bg-light: #f8fafc;     
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
+      --shadow-card: 0 24px 48px -12px rgba(0,0,0,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-main);
+      background-color: #fff;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1,h2,h3,h4 {
+      color: var(--text-main);
+      line-height: 1.2;
+      margin: 0 0 0.5em 0;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 1em 0;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 1rem;
+      margin: 0 auto;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-2-compact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-2-compact {
+        grid-template-columns: 1fr;
+      }
+      .grid-3 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #FFFFFF;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e2e8f0;
+      z-index: 999;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .75rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: .9rem;
+      color: var(--text-main);
+      line-height: 1.2;
+      gap: .5rem;
+    }
+    .brand-icon {
+      width: 2rem;
+      height: 2rem;
+      border-radius: .5rem;
+      background-color: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: .9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: .5rem;
+      background-color: #fff;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-header {
+      background-color: var(--accent);
+      color: #fff;
+      border-radius: .5rem;
+      padding: .5rem .75rem;
+      font-size: .8rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: var(--shadow-card);
+      border: none;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .btn-header:hover {
+      background-color: var(--accent-dark);
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+    @media (min-width: 768px) {
+      section {
+        padding: 5rem 0;
+      }
+    }
+
+    .hero {
+      background: var(--bg-accent);
+      background: linear-gradient(to bottom, var(--bg-accent) 0%, #fff 70%);
+    }
+
+    .hero-heading {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.2;
+      margin: 0 0 1rem 0;
+    }
+    @media (min-width:768px){
+      .hero-heading {
+        font-size: 2.5rem;
+      }
+    }
+
+    .hero-sub {
+      font-size: 1.125rem;
+      line-height: 1.4;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 1rem;
+      padding: .9rem 1.5rem;
+      font-size: 1rem;
+      line-height: 1.2;
+      box-shadow: var(--shadow-card);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background-color: var(--accent-dark);
+    }
+
+    .hero-trust {
+      font-size: .9rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin-top: .75rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-card);
+      padding: 1.5rem;
+    }
+
+    .ratio-16-9 {
+      width: 100%;
+      background-color: #f1f5f9;
+      color: #94a3b8;
+      border-radius: var(--radius-lg);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      min-height: 200px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-main);
+      max-width: 40rem;
+      margin: 0 auto 2rem;
+      line-height: 1.2;
+    }
+
+    .benefit-card {
+      background-color: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 1.25rem 1.25rem 1rem;
+    }
+    .benefit-emoji {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .benefit-title {
+      margin: .75rem 0 .5rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .benefit-desc {
+      font-size: .9rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .value-line {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: .95rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .value-line del {
+      color: #94a3b8;
+    }
+    .value-line strong {
+      color: var(--text-main);
+    }
+
+    .center-actions {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .why-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .why-list li {
+      margin-bottom: .75rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    .why-list li span.bullet {
+      color: var(--accent);
+      font-weight: 600;
+      margin-right: .5rem;
+    }
+
+    .ratio-9-16 {
+      background-color: #f1f5f9;
+      color: #94a3b8;
+      border-radius: var(--radius-lg);
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 2rem;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .checklist li {
+      margin-bottom: .5rem;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .checkmark {
+      color: var(--accent);
+      margin-right: .5rem;
+      font-weight: 600;
+    }
+
+    .testi-block {
+      margin-top: 2rem;
+    }
+
+    .testi-quote {
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: .95rem;
+      margin: 0 0 1rem 0;
+      background-color: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 1rem 1rem;
+    }
+
+    .testi-note {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: .9rem;
+    }
+
+    .faq-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background-color: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: var(--text-main);
+      font-size: 1rem;
+      margin: 0 0 .5rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+    }
+
+    .faq-a {
+      font-size: .9rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.4;
+      padding-left: 1.5rem;
+    }
+
+    .form-wrapper {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .form-card {
+      background-color: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-card);
+      padding: 2rem;
+    }
+
+    .form-card h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 1.5rem;
+      color: var(--text-main);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .input-field,
+    .select-field {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: .75rem .9rem;
+      font-size: .9rem;
+      line-height: 1.3;
+      color: var(--text-main);
+      font-family: inherit;
+      background-color: #fff;
+    }
+
+    .input-field:focus,
+    .select-field:focus {
+      outline: 2px solid var(--accent);
+      border-color: var(--accent);
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-lg);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: .9rem 1rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-card);
+    }
+    .btn-submit:hover {
+      background-color: var(--accent-dark);
+    }
+
+    .form-note {
+      font-size: .7rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .urgency-text {
+      font-size: .9rem;
+      color: var(--text-secondary);
+      text-align: center;
+      line-height: 1.4;
+      margin-top: 2rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      border-top: 1px solid #e2e8f0;
+      padding: 2rem 1rem;
+      font-size: .7rem;
+      line-height: 1.4;
+      text-align: center;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <a href="#" class="brand-logo-link" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;color:inherit;">
+        <img src="logo.png" alt="Sep7Ro Online Chess School" class="brand-logo">
+        <div class="brand-text">
+          <div>Sep7Ro Online Chess School</div>
+        </div>
+      </a>
+    </div>
+
+    <a href="#trial-form" class="btn-header">
+      Free Trial Lesson
+    </a>
+  </div>
+</header>
+
+
+  <main style="padding-top:4.5rem">
+
+    <!-- HERO / Section 1 -->
+    <section class="hero">
+      <div class="container grid-2" style="align-items:center;">
+        <div>
+          <h1 class="hero-heading">
+            Your Child’s Brain Deserves a Workout – Try a Free Online Chess Lesson
+          </h1>
+          <div class="hero-sub">
+            Live, interactive chess lessons for kids 6–12. Boost focus, logic &amp; confidence. No experience needed.
+          </div>
+
+          <a href="#trial-form" class="btn-primary">
+            Book a Free Trial Lesson
+          </a>
+
+          <div class="hero-trust">
+            ✅ Trusted by 1400+ parents<br/>
+            ✅ 100% live – no recordings
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ratio-16-9">
+            <!-- screenshot  -->
+            <div style="text-align:center; line-height:1.4;">
+              <div style="font-size:2rem; margin-bottom:.5rem;"></div>
+              <div>Live Zoom Lesson Preview</div>
+              <div style="font-size:.7rem; color:#94a3b8; margin-top:.25rem;">teacher + kids playing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: What You Get -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">
+          Here’s What’s Included in Your Free Session
+        </h2>
+
+        <div class="grid-3">
+          <div class="benefit-card">
+            <div class="benefit-emoji">🎓</div>
+            <div class="benefit-title">1-on-1 Evaluation</div>
+            <p class="benefit-desc">
+              We assess your child’s current level and learning style
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-emoji">🧠</div>
+            <div class="benefit-title">25-min Live Chess Class</div>
+            <p class="benefit-desc">
+              Interactive Zoom session with a certified instructor
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-emoji">📈</div>
+            <div class="benefit-title">Progress Roadmap</div>
+            <p class="benefit-desc">
+              A personalized path if they wish to continue learning
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-emoji">🧾</div>
+            <div class="benefit-title">Parent Feedback Sheet</div>
+            <p class="benefit-desc">
+              Clear insight on focus, attention &amp; potential
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-emoji">🎁</div>
+            <div class="benefit-title">Bonus PDF</div>
+            <p class="benefit-desc">
+              “5 Logic Games to Play with Your Child” – simple, screen-free mini challenges.
+            </p>
+          </div>
+        </div>
+
+        <div class="value-line">
+          Total Value: <del>$79</del> <strong>$0</strong> – Yours Free.
+        </div>
+
+        <div class="center-actions">
+          <div style="font-size:.8rem; color:var(--text-secondary); line-height:1.4; margin-bottom:1rem;">
+            No credit card. No pressure. Just try.
+          </div>
+          <a href="#trial-form" class="btn-primary">
+            Rezervă demo gratuit!
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Why Chess -->
+    <section style="background-color:var(--bg-light);">
+      <div class="container grid-2">
+        <div>
+          <h2 class="section-title" style="text-align:left; margin-bottom:1rem;">
+            Why Parents Choose Chess Over More Screen Time
+          </h2>
+
+          <ul class="why-list">
+            <li><span class="bullet">•</span><span>Develops problem-solving &amp; focus</span></li>
+            <li><span class="bullet">•</span><span>Helps kids calm their minds and stay present</span></li>
+            <li><span class="bullet">•</span><span>Encourages strategic thinking — a skill for life</span></li>
+            <li><span class="bullet">•</span><span>Improves patience &amp; decision-making</span></li>
+            <li><span class="bullet">•</span><span>Bonus: It’s FUN. Kids love the challenge.</span></li>
+          </ul>
+
+          <a href="#trial-form" class="btn-primary">
+            Book a Free Trial Lesson
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="ratio-9-16">
+            <div>
+              <div style="font-size:2rem; margin-bottom:.5rem;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Why Us + Testimonials -->
+    <section>
+      <div class="container grid-2-compact">
+
+        <div>
+          <h2 class="section-title" style="text-align:left; margin-bottom:1rem;">
+            Why 1400+ Parents Chose Sep7Ro Online Chess School
+          </h2>
+
+          <ul class="checklist">
+            <li><span class="checkmark">✅</span><span>Certified chess instructors with 10+ years experience</span></li>
+            <li><span class="checkmark">✅</span><span>Only 4–6 kids per group – every child is heard</span></li>
+            <li><span class="checkmark">✅</span><span>Weekly feedback for parents</span></li>
+            <li><span class="checkmark">✅</span><span>Bilingual classes (EN / RO)</span></li>
+            <li><span class="checkmark">✅</span><span>Students placed in international tournaments</span></li>
+          </ul>
+
+          <a href="#trial-form" class="btn-primary">
+            Testează cu o lecție gratuită
+          </a>
+        </div>
+
+        <div class="testi-block">
+          <h3 style="font-size:1.25rem; font-weight:600; color:var(--text-main); margin-top:0; margin-bottom:1rem;">
+            What Parents Are Saying
+          </h3>
+
+          <p class="testi-quote">
+            “I thought online chess would be boring. Turns out, my daughter loves it more than Roblox!”
+          </p>
+
+          <p class="testi-quote">
+            “We tried many activities. This is the first time my son said: ‘Can I do more of this?’”
+          </p>
+
+          <p class="testi-note">
+            ⭐ Over 92% of parents enroll after the first lesson
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 6: FAQ -->
+    <section style="background-color:var(--bg-light);">
+      <div class="container faq-wrapper">
+        <h2 class="section-title" style="margin-bottom:2rem;">
+          Still Wondering If It’s a Good Fit?
+        </h2>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>❓</span>
+            <span>My child has never played before. Is that okay?</span>
+          </div>
+          <p class="faq-a">
+            ✅ Yes! We have beginner groups starting weekly. We start from how the pieces move and keep it fun.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>❓</span>
+            <span>What if my child is shy or distracted?</span>
+          </div>
+          <p class="faq-a">
+            ✅ Our instructors specialize in working with introverted or high-energy kids. Small groups mean they’re seen.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>❓</span>
+            <span>Do I have to sign up for anything after the free lesson?</span>
+          </div>
+          <p class="faq-a">
+            ✅ No. If your child enjoys it, we’ll send you available groups. You decide.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            <span>❓</span>
+            <span>Do you also work with kids who already play?</span>
+          </div>
+          <p class="faq-a">
+            ✅ Yes. We prepare intermediate kids for real tournaments, not just casual play.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Form -->
+    <section id="trial-form">
+      <div class="container form-wrapper">
+        <div class="form-card">
+          <h2>Reserve Your Free Trial Lesson</h2>
+
+          <form>
+            <div class="form-group">
+              <input class="input-field" type="text" name="parent_name" placeholder="Parent Name *" required />
+            </div>
+
+            <div class="form-group">
+              <input class="input-field" type="email" name="email" placeholder="Email *" required />
+            </div>
+
+            <div class="form-group">
+              <input class="input-field" type="tel" name="phone" placeholder="WhatsApp / Phone" />
+            </div>
+
+            <div class="form-group">
+              <input class="input-field" type="number" name="age" placeholder="Child’s Age" min="3" max="18" />
+            </div>
+
+            <div class="form-group">
+              <select class="select-field" name="level">
+                <option>Beginner (never played)</option>
+                <option>Played a little</option>
+                <option>Intermediate / already plays</option>
+              </select>
+            </div>
+
+            <button class="btn-submit" type="submit">
+              Book My Free Lesson
+            </button>
+
+            <div class="form-note">
+              We’ll contact you within 24 hours to confirm your spot.<br/>
+              No spam. No pressure.
+            </div>
+          </form>
+        </div>
+
+        <div class="urgency-text">
+          We keep our groups small (max 6 kids).<br/>
+          Demo spots fill up fast – especially before school breaks.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Sep7Ro Online Chess School · All rights reserved<br/>
+    Live online chess classes for kids • EN / RO
+  </footer>
+
+</body>
+</html>
