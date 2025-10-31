@@ -457,7 +457,7 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: .75rem .9rem;
-      font-size: .9rem;
+      font-size: .6rem;
       line-height: 1.3;
       color: var(--text-main);
       font-family: inherit;
@@ -801,9 +801,14 @@
               <input class="input-field" type="email" name="email" placeholder="Email *" required />
             </div>
 
-            <div class="form-group">
-              <input class="input-field" type="tel" name="phone" placeholder="WhatsApp / Phone" />
-            </div>
+            <input
+  class="input-field"
+  type="tel"
+  name="phone"
+  placeholder="WhatsApp / Phone (include country code) *"
+  required
+/>
+
 
             <div class="form-group">
               <input class="input-field" type="number" name="age" placeholder="Child’s Age" min="3" max="18" />
@@ -819,112 +824,15 @@
             </div>
 
             <div class="form-group">
-  <select class="select-field" name="country" required>
-    <option value="" disabled selected>Country</option>
-    <option>Afghanistan</option>
-    <option>Albania</option>
-    <option>Algeria</option>
-    <option>Andorra</option>
-    <option>Angola</option>
-    <option>Argentina</option>
-    <option>Armenia</option>
-    <option>Australia</option>
-    <option>Austria</option>
-    <option>Azerbaijan</option>
-    <option>Bahamas</option>
-    <option>Bahrain</option>
-    <option>Bangladesh</option>
-    <option>Belarus</option>
-    <option>Belgium</option>
-    <option>Belize</option>
-    <option>Benin</option>
-    <option>Bolivia</option>
-    <option>Bosnia and Herzegovina</option>
-    <option>Botswana</option>
-    <option>Brazil</option>
-    <option>Bulgaria</option>
-    <option>Burkina Faso</option>
-    <option>Cambodia</option>
-    <option>Cameroon</option>
-    <option>Canada</option>
-    <option>Chile</option>
-    <option>China</option>
-    <option>Colombia</option>
-    <option>Costa Rica</option>
-    <option>Croatia</option>
-    <option>Cyprus</option>
-    <option>Czech Republic</option>
-    <option>Denmark</option>
-    <option>Dominican Republic</option>
-    <option>Ecuador</option>
-    <option>Egypt</option>
-    <option>El Salvador</option>
-    <option>Estonia</option>
-    <option>Finland</option>
-    <option>France</option>
-    <option>Georgia</option>
-    <option>Germany</option>
-    <option>Greece</option>
-    <option>Guatemala</option>
-    <option>Honduras</option>
-    <option>Hong Kong</option>
-    <option>Hungary</option>
-    <option>Iceland</option>
-    <option>India</option>
-    <option>Indonesia</option>
-    <option>Ireland</option>
-    <option>Israel</option>
-    <option>Italy</option>
-    <option>Japan</option>
-    <option>Jordan</option>
-    <option>Kenya</option>
-    <option>Kuwait</option>
-    <option>Latvia</option>
-    <option>Lebanon</option>
-    <option>Lithuania</option>
-    <option>Luxembourg</option>
-    <option>Malaysia</option>
-    <option>Malta</option>
-    <option>Mexico</option>
-    <option>Moldova</option>
-    <option>Montenegro</option>
-    <option>Morocco</option>
-    <option>Netherlands</option>
-    <option>New Zealand</option>
-    <option>Nigeria</option>
-    <option>North Macedonia</option>
-    <option>Norway</option>
-    <option>Pakistan</option>
-    <option>Panama</option>
-    <option>Peru</option>
-    <option>Philippines</option>
-    <option>Poland</option>
-    <option>Portugal</option>
-    <option>Qatar</option>
-    <option>Romania</option>
-    <option>Saudi Arabia</option>
-    <option>Serbia</option>
-    <option>Singapore</option>
-    <option>Slovakia</option>
-    <option>Slovenia</option>
-    <option>South Africa</option>
-    <option>South Korea</option>
-    <option>Spain</option>
-    <option>Sri Lanka</option>
-    <option>Sweden</option>
-    <option>Switzerland</option>
-    <option>Taiwan</option>
-    <option>Thailand</option>
-    <option>Turkey</option>
-    <option>Ukraine</option>
-    <option>United Arab Emirates</option>
-    <option>United Kingdom</option>
-    <option>United States</option>
-    <option>Uruguay</option>
-    <option>Venezuela</option>
-    <option>Vietnam</option>
-  </select>
+  <input
+    class="input-field"
+    type="text"
+    name="country"
+    placeholder="Country *"
+    required
+  />
 </div>
+
 
 
             <button class="btn-submit" type="submit">
@@ -947,6 +855,12 @@
   </main>
 
 <footer>
+  <div class="footer-contact">
+    Sep7Ro Online Chess School<br/>
+    WhatsApp / Call: <span>+1 438 781 0793</span><br/>
+    Online chess classes for kids (ages 6–12), English & Romanian.
+  </div>
+
   <div style="margin-bottom:1rem;">
     <a
       class="footer-btn"
@@ -954,13 +868,14 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      WhatsApp / Call: +1 438 781 0793
+      Message us on WhatsApp
     </a>
   </div>
 
   © 2025 Sep7Ro Online Chess School · All rights reserved<br/>
-  Live online chess classes for kids • EN / RO
+  Live online chess lessons • Focus • Confidence • Logic
 </footer>
+
 
 
 
