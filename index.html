@@ -552,6 +552,22 @@
   border-radius: 1rem;
 }
 
+.card.video-card {
+  padding: 0;
+  border: none;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.card.video-card iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: none;
+}
+
+
 
 
   </style>
@@ -601,20 +617,15 @@
           </div>
         </div>
 
-        <div class="card">
-  <div class="ratio-16-9">
-    <iframe 
-      width="560" 
-      height="315" 
-      src="https://www.youtube.com/embed/BQDt8VrEe5g" 
-      title="Sep7Ro Online Chess Lesson" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen
-      style="width:100%; height:100%; border-radius:1rem;">
-    </iframe>
-  </div>
+<div class="card video-card">
+  <iframe
+    src="https://www.youtube.com/embed/BQDt8VrEe5g"
+    title="Sep7Ro Online Chess Lesson"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
 </div>
+
       </div>
     </section>
 
@@ -695,20 +706,15 @@
           </a>
         </div>
 
-        <div class="card">
-  <div class="ratio-9-16">
-    <iframe 
-      width="315" 
-      height="560" 
-      src="https://www.youtube.com/embed/BQDt8VrEe5g" 
-      title="Why Chess - Sep7Ro Online Chess School" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen
-      style="width:100%; height:100%; border-radius:1rem;">
-    </iframe>
-  </div>
+<div class="card video-card">
+  <iframe
+    src="https://www.youtube.com/embed/BQDt8VrEe5g"
+    title="Sep7Ro Online Chess Lesson"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
 </div>
+
 
 </div>
 
