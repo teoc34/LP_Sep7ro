@@ -568,6 +568,31 @@
   display: block;
   border: none;
 }
+#knight-lottie {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Lottie standalone, fără card */
+.lottie-box{
+  width: clamp(220px, 28vw, 420px);
+  aspect-ratio: 1 / 1;
+  margin: 2rem auto 0;         /* distanță față de carduri */
+  background: transparent;      /* fără chenar alb */
+  border-radius: 1rem;          /* poți scoate dacă vrei 0 */
+  overflow: visible;            /* să nu taie nimic */
+  box-shadow: none;             /* fără umbră */
+}
+
+/* separator fin (opțional) */
+.section-divider{
+  height: 1px;
+  background: #e2e8f0;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+
 
 
 
@@ -593,6 +618,8 @@
     </a>
   </div>
 </header>
+       <script src="https://unpkg.com/lottie-web/build/player/lottie.min.js"></script>
+
 
 
   <main style="padding-top:4.5rem">
@@ -672,6 +699,12 @@
             </p>
           </div>
         </div>
+
+        <div class="section-divider"></div>
+<div id="knight-lottie" class="lottie-box"></div>
+
+
+
 
         <div class="value-line">
           Total Value: <strong>$0</strong> – Free.
@@ -932,6 +965,20 @@
   Live online chess lessons • Focus • Confidence • Logic
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  lottie.loadAnimation({
+    container: document.getElementById('knight-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'Knight Jump.json', // același fișier pe care l-ai încărcat
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  });
+});
+</script>
 
 
 
