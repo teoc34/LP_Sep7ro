@@ -641,12 +641,6 @@
   text-align: center;
 }
 
-/* Ensure container centers the button inside sections */
-.center-actions,
-section,
-.container {
-  text-align: center;
-}
 
 /* Optional: remove weird flex spacing in grid sections */
 .grid-2 > div:last-child .btn-primary {
@@ -690,6 +684,31 @@ footer .footer-btn {
   display: inline-block;
   margin: 1rem auto 0;
 }
+
+    /* 1) Anulează centrările globale pe section/container */
+section,
+.container {
+  text-align: unset;    /* sau left */
+}
+
+/* 2) Păstrează centrate doar elementele care chiar trebuie */
+.section-title,
+.center-actions,
+.value-line,
+.grid-span-full {
+  text-align: center;
+}
+
+/* 3) Forțează alinierea la stânga acolo unde s-a stricat */
+.hero-trust,
+.why-list,
+.faq-wrapper,
+.faq-item,
+.faq-q,
+.faq-a {
+  text-align: left;
+}
+
 
 
 
