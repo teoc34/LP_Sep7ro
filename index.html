@@ -631,6 +631,67 @@
   transform-origin: center;
 }
 
+    /* Center all main action buttons */
+.btn-primary,
+.btn-header,
+.footer-btn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Ensure container centers the button inside sections */
+.center-actions,
+section,
+.container {
+  text-align: center;
+}
+
+/* Optional: remove weird flex spacing in grid sections */
+.grid-2 > div:last-child .btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
+}
+/* Centrează TOATE CTA-urile din conținut (nu și din header) */
+main .btn-primary,
+section .btn-primary,
+.form-card .btn-submit,
+footer .footer-btn {
+  display: block;          /* nu inline-block */
+  width: fit-content;
+  margin: 1rem auto 0;     /* centru prin margin auto */
+  text-align: center;
+}
+
+/* Asigură-te că butonul din HERO se centrează */
+.hero .btn-primary {
+  margin-top: 1rem;
+}
+
+/* Butonul "Learn More – Free Lesson" din secțiunea Why Parents */
+.grid-2 > div:first-child .btn-primary {
+  margin-top: 1rem;
+}
+
+/* Păstrează butonul din header la dreapta */
+.btn-header {
+  display: inline-block;
+  margin: 0;               /* nu îl centrăm */
+}
+/* Pune CTA-ul pe mijlocul întregii secțiuni, peste ambele coloane */
+.grid-span-full {
+  grid-column: 1 / -1;   /* întinde pe toată lățimea grid-ului */
+  text-align: center;
+}
+
+/* buton centrat în wrapper */
+.grid-span-full .btn-primary {
+  display: inline-block;
+  margin: 1rem auto 0;
+}
+
+
 
 
 
@@ -672,9 +733,10 @@
             Live, interactive chess lessons for kids 6–12. Boost focus, logic &amp; confidence. No experience needed.
           </div>
 
-          <a href="#trial-form" class="btn-primary">
-            Book a Free Trial Lesson
-          </a>
+          <div class="grid-span-full">
+  <a href="#trial-form" class="btn-primary">Book a Free Trial Lesson</a>
+</div>
+
 
           <div class="hero-trust">
             ✅ Over 200 students currently learning with us<br/>
@@ -776,9 +838,10 @@
             <li><span class="bullet">•</span><span>Bonus: It’s FUN. Kids love the challenge.</span></li>
           </ul>
 
-          <a href="#trial-form" class="btn-primary">
-            Learn More - Free Lesson
-          </a>
+          <div class="grid-span-full">
+  <a href="#trial-form" class="btn-primary">Find out more</a>
+</div>
+
         </div>
 
 <div class="card video-card">
@@ -813,9 +876,10 @@
             <li><span class="checkmark">✅</span><span>Flexibility: Missed lessons can be recovered.</span></li>
           </ul>
 
-          <a href="#trial-form" class="btn-primary">
-            Book a Free Trial Lesson
-          </a>
+          <div class="grid-span-full">
+  <a href="#trial-form" class="btn-primary">Learn More – Free Lesson</a>
+</div>
+
         </div>
 
         <div class="testi-block">
@@ -895,7 +959,7 @@
           <h2>Reserve your free trial lesson</h2>
 
           <form
-  action="https://formsubmit.co/carateodora@yahoo.com"
+  action="https://formsubmit.co/Septinho@gmail.com"
   method="POST"
 >
   <input type="hidden" name="_subject" value="NEW LEAD: Free Chess Trial Request">
