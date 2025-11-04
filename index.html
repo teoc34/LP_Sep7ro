@@ -209,6 +209,7 @@
       color: var(--text-secondary);
       font-weight: 500;
       margin-bottom: 1.5rem;
+      text-align: center;
     }
 
     .btn-primary {
@@ -224,6 +225,7 @@
       box-shadow: var(--shadow-card);
       border: none;
       cursor: pointer;
+      text-align: center;
     }
     .btn-primary:hover {
       background-color: var(--accent-dark);
@@ -592,8 +594,38 @@
   margin: 2rem auto 0;
 }
 
+.lottie-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
 
+.lottie-box {
+  width: clamp(260px, 30vw, 400px);
+  height: auto;
+  overflow: visible !important;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.lottie-box.smaller {
+  transform: scale(0.5);  /* micșorăm doar a doua animație */
+  transform-origin: center;
+}
+
+@media (max-width: 768px) {
+  .lottie-row {
+    gap: 2rem;
+  }
+  .lottie-box {
+    width: clamp(180px, 40vw, 300px);
+  }
+}
 
 
 
@@ -701,9 +733,11 @@
         </div>
 
         <div class="section-divider"></div>
-<div id="knight-lottie" class="lottie-box"></div>
 
-
+<div class="lottie-row">
+  <div id="knight-lottie" class="lottie-box"></div>
+  <div id="strategy-lottie" class="lottie-box smaller"></div>
+</div>
 
 
         <div class="value-line">
@@ -726,7 +760,7 @@
       <div class="container grid-2">
         <div>
           <h2 class="section-title" style="text-align:left; margin-bottom:1rem;">
-            Why Parents Choose Chess Over More Screen Time
+            Why parents choose chess over more screen time
           </h2>
 
           <ul class="why-list">
@@ -763,14 +797,13 @@
 
         <div>
           <h2 class="section-title" style="text-align:left; margin-bottom:1rem;">
-            Why 1400+ Parents Chose Sep7Ro Online Chess School
+            Why 1400+ parents chose Sep7Ro online chess school
           </h2>
 
           <ul class="checklist">
             <li><span class="checkmark">✅</span><span>Certified chess instructors with 15+ years experience</span></li>
             <li><span class="checkmark">✅</span><span>Small Group Classes – every child is heard</span></li>
             <li><span class="checkmark">✅</span><span>Monthly feedback for parents</span></li>
-            <li><span class="checkmark">✅</span><span>Bilingual classes (EN / RO)</span></li>
             <li><span class="checkmark">✅</span><span>Students play in international tournaments</span></li>
             <li><span class="checkmark">✅</span><span>Flexibility: Missed lessons can be recovered.</span></li>
           </ul>
@@ -782,7 +815,7 @@
 
         <div class="testi-block">
           <h3 style="font-size:1.25rem; font-weight:600; color:var(--text-main); margin-top:0; margin-bottom:1rem;">
-            What Parents Are Saying
+            What parents are saying
           </h3>
 
           <p class="testi-quote">
@@ -805,7 +838,7 @@
     <section style="background-color:var(--bg-light);">
       <div class="container faq-wrapper">
         <h2 class="section-title" style="margin-bottom:2rem;">
-          Still Wondering If It’s a Good Fit?
+          Still wondering if it’s a good fit?
         </h2>
 
         <div class="faq-item">
@@ -854,7 +887,7 @@
     <section id="trial-form">
       <div class="container form-wrapper">
         <div class="form-card">
-          <h2>Reserve Your Free Trial Lesson</h2>
+          <h2>Reserve your free trial lesson</h2>
 
           <form
   action="https://formsubmit.co/carateodora@yahoo.com"
@@ -946,7 +979,7 @@
 <footer>
   <div class="footer-contact">
     Sep7Ro Online Chess School<br/>
-    WhatsApp / Call: <span>+1 438 781 0793</span><br/>
+    WhatsApp / Call: <span>+14387810793</span><br/>
     Online chess classes for kids (ages 6–12), English & Romanian.
   </div>
 
@@ -972,12 +1005,20 @@ document.addEventListener('DOMContentLoaded', function () {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'Knight Jump.json', // același fișier pe care l-ai încărcat
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+    path: 'Knight Jump.json',
+    rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+  });
+
+  lottie.loadAnimation({
+    container: document.getElementById('strategy-lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'strategy.json',
+    rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
   });
 });
+
 </script>
 
 
