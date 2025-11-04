@@ -603,29 +603,34 @@
   margin-top: 2.5rem;
 }
 
+.lottie-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;             /* nu se mai rupe pe rând nou */
+  overflow-x: auto;              /* scroll orizontal dacă ecranul e foarte mic */
+  -webkit-overflow-scrolling: touch;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
 .lottie-box {
-  width: clamp(260px, 30vw, 400px);
+  flex: 0 0 auto;                /* păstrează dimensiunea fixă în flexbox */
+  width: clamp(180px, 38vw, 300px);
   height: auto;
-  overflow: visible !important;
   background: transparent;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .lottie-box.smaller {
-  transform: scale(0.5);  /* micșorăm doar a doua animație */
+  transform: scale(0.85);
   transform-origin: center;
 }
 
-@media (max-width: 768px) {
-  .lottie-row {
-    gap: 2rem;
-  }
-  .lottie-box {
-    width: clamp(180px, 40vw, 300px);
-  }
-}
 
 
 
